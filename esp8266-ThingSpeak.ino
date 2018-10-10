@@ -100,11 +100,11 @@ void loop() {
   // Read sensor values
    float x = analogRead(A1);
    
-        if (isnan(t)) {
+        if (isnan(x)) {
         if (DEBUG) Serial.println("Failed to read from sensors");
       }
       else {
-          if (DEBUG) Serial.println("Temp="+String(t)+" *C");
+          if (DEBUG) Serial.println("Temp="+String(x)+" *C");
            thingSpeakWrite(x);                                      // Write values to thingspeak
       }
   
