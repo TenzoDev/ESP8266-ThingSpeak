@@ -1,12 +1,11 @@
-/* ------------Arduino+esp8266-01 thingSpeak example---------------
- * --------Send data to Thingspeak channel using AT Command-------------------
- * 
-
+/* ------------Arduino+esp8266-01 thingSpeak example---------------------
+ * --------Send data to Thingspeak channel using AT Command--------------
+ * -----------------------------TENZO------------------------------------
 */
 #include <SoftwareSerial.h>
 SoftwareSerial espSerial =  SoftwareSerial(2,3);      // arduino RX pin=2  arduino TX pin=3  
 
-String apiKey = "4H9SGCCQG1MPAY72";     // replace with your channel's thingspeak WRITE API key
+String apiKey = "Your-API-From-ThinSpeak";     // replace with your channel's thingspeak WRITE API key
 
 String ssid="Your-WiFi-Name";    // Wifi network SSID
 String password ="Your-WiFi-PassWord";  // Wifi network password
@@ -113,7 +112,3 @@ void loop() {
   // thingspeak needs 15 sec delay between updates,     
   delay(20000);  
 }
-
-
-
-
